@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import { NavBar, Container } from "react-bootstrap";
+import logo from '../assets/img/logo.png';
+import navIcon1 from '../assets/img/logo.png';
+import navIcon2 from '../assets/img/logo.png';
+import navIcon3 from '../assets/img/logo.png';
+import navIcon4 from '../assets/img/logo.png';
+
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scolled, seScrolled] = useState(false);
@@ -26,7 +32,7 @@ const onUpdateActiveLink = (value) => {
     <NavBar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <NavBar.Brand href="#home">
-          <img src={} alt="Logo" />
+          <img src={logo} alt="Logo" />
         </NavBar.Brand>
         <NavBar.Toogle aria-controls="basic-navbar-nav"> 
           <span className="navbar-toogle-icon"></span>
@@ -40,10 +46,10 @@ const onUpdateActiveLink = (value) => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#"><img src={} alt="" /></a>
-              <a href="#"><img src={} alt="" /></a>
-              <a href="#"><img src={} alt="" /></a>
-              <a href="#"><img src={} alt="" /></a>
+              <a href="#"><img src={navIcon1} alt="" /></a>
+              <a href="#"><img src={navIcon2} alt="" /></a>
+              <a href="#"><img src={navIcon3} alt="" /></a>
+              <a href="#"><img src={navIcon4} alt="" /></a>
             </div>
             <button className="vvd" OnClick={() => console.log('connect')}><span>Připoj se</span></button>
           </span>
